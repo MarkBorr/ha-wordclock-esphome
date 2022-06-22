@@ -2,6 +2,8 @@ esphome:
   name: ${devicename}
   platform: ESP8266
   board: nodemcuv2
+  framework:
+    version: 2.7.4
   includes:
     - wordclock.h
   on_boot:
@@ -37,7 +39,6 @@ ota:
 
 logger:
   esp8266_store_log_strings_in_flash: false
-
 
 light:
   - platform: fastled_clockless
