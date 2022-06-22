@@ -41,12 +41,19 @@ logger:
 
 light:
   - platform: fastled_clockless
-    id: fastledlight
+    id: fastledlight_foreground
     chipset: WS2812
     pin: GPIO03
     num_leds: 125
     rgb_order: BRG
-    name: ${friendly_name}
+    name: "${friendly_name} Foreground"
+  - platform: fastled_clockless
+    id: fastledlight_background
+    chipset: WS2812
+    pin: GPIO03
+    num_leds: 125
+    rgb_order: BRG
+    name: "${friendly_name} Background"
   
 time:
   - platform: homeassistant
